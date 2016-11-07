@@ -10,8 +10,5 @@
 # 1) Print the orginal text (150 tokens)
 # 1) Print the new text
 print("START*******")
-#starting assignment and 1st commit
-#2nd commit 
-#3rd commit
-#4th commit
+
 print("\n\nEND*******")
