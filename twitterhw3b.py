@@ -10,3 +10,4 @@
 
 print("Average subjectivity is")
 print("Average polarity is")
+#need passwords
