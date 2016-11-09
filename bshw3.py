@@ -11,4 +11,5 @@
 # Deliverables
 # Make sure the new page is uploaded to your GitHub account.
 
-#commit
+#Grab with beautiful soup, use prettify to make it a string,
+#then use string replace 
