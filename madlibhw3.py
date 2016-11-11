@@ -9,6 +9,8 @@
 # Deliverables:
 # 1) Print the orginal text (150 tokens)
 # 1) Print the new text
+print('\nName: Zoe Halbeisen\nUnique name: zoeanne\nUnique ID: 84194416\nSection Day/Time: Wednesday 5:30-6:30\n')
+
 print("START*******")
 
 import nltk
@@ -17,20 +19,20 @@ from nltk import word_tokenize, sent_tokenize
 from nltk.book import *
 from nltk import bigrams
 
-tokens = text2[:150]
+tokens = text2[:150] #This makes it so that I only get 150 tokens 
 tagged_tokens = nltk.pos_tag(tokens)
 
-tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective","PRON":"a pronoun"}
+tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective","PRON":"a pronoun"} #I got started with my code from Colleen's madlib code and just added a pronoun category
 substitution_probabilities = {"NN":.15,"NNS":.1,"VB":.1,"JJ":.1,"PRON":.1}
 
-def spaced(word):
+def spaced(word): #again this is from Colleen's madlib code
 	if word in [",", ".", "?", "!", ":"]:
 		return word
 	else:
 		return " " + word
 
-final_words = []
-original_words = []
+final_words = [] #creating a list to append the new text to
+original_words = [] #creating a list to append the old text to
 for word in tokens:
 	original_words.append(spaced(word))
 
