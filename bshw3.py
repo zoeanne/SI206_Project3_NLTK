@@ -11,5 +11,22 @@
 # Deliverables
 # Make sure the new page is uploaded to your GitHub account.
 
-#Grab with beautiful soup, use prettify to make it a string,
-#then use string replace 
+import requests
+from bs4 import BeautifulSoup
+
+print('\nName: Zoe Halbeisen\nUnique name: zoeanne\nUnique ID: 84194416\nSection Day/Time: Wednesday 5:30-6:30\n')
+
+base_url = 'http://collemc.people.si.umich.edu/data/bshw3StarterFile.html' 
+r = requests.get(base_url)
+soup = BeautifulSoup(r.text, "html.parser")
+
+string = soup.prettify()
+amazstud = string.replace("student", "AMAZING student")
+amazstud2 = amazstud.replace("Student", "AMAZING Student")
+
+amazstud3 = amazstud2.replace("logo2.png", "https://www.dropbox.com/s/2u2r3lbjmuzof5x/logo.png?dl=1")
+amazstud4 = amazstud3.replace("https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg", "https://www.dropbox.com/s/n4ubyprj4gz92fv/IMG_7089.jpg?dl=1")
+
+f = open ('alteredUMSI.html','w')
+f.write(amazstud4)
+f.close()
